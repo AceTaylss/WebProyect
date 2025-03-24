@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalles del Producto</title>
+<script src="https://cdn.tailwindcss.com">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#DC2626",
+        secondary: "#1F2937",
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+    },
+  },
+};
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.product-gallery::-webkit-scrollbar {display: none;}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+</style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+<nav class="bg-black/80 backdrop-blur-sm fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-white">logo</a>
+</div>
+<div class="hidden md:block">
+<div class="flex items-center space-x-8">
+<a href="#" class="text-white hover:text-primary">Inicio</a>
+<a href="#" class="text-white hover:text-primary">Productos</a>
+<a href="#" class="text-white hover:text-primary">Colecciones</a>
+<a href="#" class="text-white hover:text-primary">Contacto</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center text-white hover:text-primary">
+<i class="ri-search-line text-xl"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-white hover:text-primary">
+<i class="ri-shopping-cart-line text-xl"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-white hover:text-primary md:hidden">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="max-w-7xl mx-auto px-4 py-24">
+<div class="bg-white/95 backdrop-blur-sm rounded-xl p-8">
+<div class="flex flex-wrap -mx-4">
+<div class="w-full lg:w-3/5 px-4 mb-8 lg:mb-0">
+<div class="relative">
+<div class="overflow-hidden rounded-lg bg-gray-100">
+<div id="mainCarousel" class="relative h-[500px]">
+<img src="https://public.readdy.ai/ai/img_res/21e41383b168598d0538425ef76bc990.jpg" class="w-full h-full object-cover" alt="Producto">
+</div>
+</div>
+<button class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center cursor-pointer !rounded-button">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center cursor-pointer !rounded-button">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</button>
+</div>
+<div class="product-gallery flex gap-4 mt-4 overflow-x-auto">
+<div class="flex-shrink-0 w-24 h-24 rounded-lg bg-gray-100 cursor-pointer">
+<img src="https://public.readdy.ai/ai/img_res/9385c9cf3f2982c8273d35e555e50481.jpg" class="w-full h-full object-cover rounded-lg" alt="Miniatura">
+</div>
+<div class="flex-shrink-0 w-24 h-24 rounded-lg bg-gray-100 cursor-pointer">
+<img src="https://public.readdy.ai/ai/img_res/35bc98d6450ad3a130d0c3f58c0be833.jpg" class="w-full h-full object-cover rounded-lg" alt="Miniatura">
+</div>
+<div class="flex-shrink-0 w-24 h-24 rounded-lg bg-gray-100 cursor-pointer">
+<img src="https://public.readdy.ai/ai/img_res/0f2dfcdbee8374fc6beff3ca60e17017.jpg" class="w-full h-full object-cover rounded-lg" alt="Miniatura">
+</div>
+</div>
+</div>
+<div class="w-full lg:w-2/5 px-4">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Pomni de peluche</h1>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-3xl font-bold text-primary">$39.99</span>
+<div class="flex items-center">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+<span class="ml-2 text-sm text-gray-500">(255 reseñas)</span>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="font-medium text-gray-900 mb-2">Tamaño</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-primary cursor-pointer !rounded-button">11.5"</button>
+<button class="px-4 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-primary cursor-pointer !rounded-button">15"</button>
+<button class="px-4 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-primary cursor-pointer !rounded-button">20"</button>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="font-medium text-gray-900 mb-2">Cantidad</h3>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full cursor-pointer !rounded-button">
+<i class="ri-subtract-line"></i>
+</button>
+<input type="number" value="1" class="w-16 h-10 text-center border-none bg-gray-100 rounded-lg">
+<button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full cursor-pointer !rounded-button">
+<i class="ri-add-line"></i>
+</button>
+</div>
+</div>
+<div class="flex gap-4 mb-8">
+<button class="flex-1 bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary/90 cursor-pointer !rounded-button">
+Añadir al carrito
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer !rounded-button">
+<i class="ri-heart-line text-xl"></i>
+</button>
+</div>
+<div class="prose prose-sm">
+<h3 class="font-medium text-gray-900 mb-2">Descripción</h3>
+<p class="text-gray-500">El Pomni de peluche está hecho a mano con materiales de alta calidad y atención al detalle. Perfecto para coleccionistas y fans de todas las edades.</p>
+<h3 class="font-medium text-gray-900 mt-4 mb-2">Material</h3>
+<p class="text-gray-500">Algodón PP y tela felpa</p>
+<h3 class="font-medium text-gray-900 mt-4 mb-2">Tamaño</h3>
+<p class="text-gray-500">11.5" - 29 centímetros (alto, ancho, profundidad)</p>
+</div>
+</div>
+</div>
+<div class="mt-16">
+<h2 class="text-2xl font-bold text-gray-900 mb-8">Reseñas de clientes</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="border border-gray-200 rounded-lg p-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<span class="text-sm text-gray-500">20/03/2025</span>
+</div>
+<p class="text-gray-600 mb-4">"¡Increíble calidad! El peluche es exactamente como se muestra en las fotos. Mi hija está encantada."</p>
+<div class="flex items-center">
+<span class="text-sm font-medium text-gray-900">María González</span>
+</div>
+</div>
+<div class="border border-gray-200 rounded-lg p-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-line text-yellow-400"></i>
+</div>
+</div>
+<span class="text-sm text-gray-500">19/03/2025</span>
+</div>
+<p class="text-gray-600 mb-4">"Muy bonito y suave. Los colores son vibrantes y la costura es de buena calidad."</p>
+<div class="flex items-center">
+<span class="text-sm font-medium text-gray-900">Carlos Rodríguez</span>
+</div>
+</div>
+<div class="border border-gray-200 rounded-lg p-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<span class="text-sm text-gray-500">18/03/2025</span>
+</div>
+<p class="text-gray-600 mb-4">"Excelente producto, llegó muy bien empaquetado y en perfecto estado."</p>
+<div class="flex items-center">
+<span class="text-sm font-medium text-gray-900">Ana Martínez</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16">
+<h2 class="text-2xl font-bold text-gray-900 mb-8">Productos similares</h2>
+<div class="relative">
+<div class="flex gap-6 overflow-x-auto pb-4">
+<div class="flex-shrink-0 w-64">
+<div class="rounded-lg overflow-hidden mb-3">
+<img src="https://public.readdy.ai/ai/img_res/f5ebe9619d336e3f93179e727b3e4887.jpg" class="w-full h-64 object-cover" alt="Producto similar">
+</div>
+<h3 class="font-medium text-gray-900">Pomni Edición Especial</h3>
+<p class="text-primary font-medium mt-1">$44.99</p>
+</div>
+<div class="flex-shrink-0 w-64">
+<div class="rounded-lg overflow-hidden mb-3">
+<img src="https://public.readdy.ai/ai/img_res/949210d3904cf2cb2ab389690d27f969.jpg" class="w-full h-64 object-cover" alt="Producto similar">
+</div>
+<h3 class="font-medium text-gray-900">Mini Pomni</h3>
+<p class="text-primary font-medium mt-1">$29.99</p>
+</div>
+<div class="flex-shrink-0 w-64">
+<div class="rounded-lg overflow-hidden mb-3">
+<img src="https://public.readdy.ai/ai/img_res/ad1ce7f3be98801346218c6e73969d53.jpg" class="w-full h-64 object-cover" alt="Producto similar">
+</div>
+<h3 class="font-medium text-gray-900">Pomni Coleccionista</h3>
+<p class="text-primary font-medium mt-1">$59.99</p>
+</div>
+<div class="flex-shrink-0 w-64">
+<div class="rounded-lg overflow-hidden mb-3">
+<img src="https://public.readdy.ai/ai/img_res/18a02564dbdd55359705e3cf66acfcc2.jpg" class="w-full h-64 object-cover" alt="Producto similar">
+</div>
+<h3 class="font-medium text-gray-900">Pomni Limitado</h3>
+<p class="text-primary font-medium mt-1">$49.99</p>
+</div>
+</div>
+<button class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center cursor-pointer !rounded-button">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</button>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center cursor-pointer !rounded-button">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const quantityInput = document.querySelector('input[type="number"]');
+  const decrementBtn = quantityInput.previousElementSibling;
+  const incrementBtn = quantityInput.nextElementSibling;
+  const mainImage = document.querySelector("#mainCarousel img");
+  const thumbnails = document.querySelectorAll(".product-gallery img");
+  const prevBtn = document.querySelector(".ri-arrow-left-s-line").parentElement;
+  const nextBtn = document.querySelector(
+    ".ri-arrow-right-s-line",
+  ).parentElement;
+  let currentImageIndex = 0;
+  const images = Array.from(thumbnails).map((thumb) => thumb.src);
+  function updateMainImage(index) {
+    mainImage.style.opacity = "0";
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = "1";
+    }, 200);
+  }
+  prevBtn.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateMainImage(currentImageIndex);
+  });
+  nextBtn.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateMainImage(currentImageIndex);
+  });
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      currentImageIndex = index;
+      updateMainImage(currentImageIndex);
+    });
+  });
+  decrementBtn.addEventListener("click", () => {
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+  incrementBtn.addEventListener("click", () => {
+    const currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  });
+  const wishlistBtn = document.querySelector(".ri-heart-line").parentElement;
+  wishlistBtn.addEventListener("click", function () {
+    const icon = this.querySelector("i");
+    icon.style.transform = "scale(1.3)";
+    setTimeout(() => {
+      icon.style.transform = "scale(1)";
+    }, 200);
+
+    if (icon.classList.contains("ri-heart-line")) {
+      icon.classList.replace("ri-heart-line", "ri-heart-fill");
+      icon.classList.add("text-primary");
+    } else {
+      icon.classList.replace("ri-heart-fill", "ri-heart-line");
+      icon.classList.remove("text-primary");
+    }
+  });
+  const sizeButtons = document.querySelectorAll('[class*="border-gray-200"]');
+  sizeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      sizeButtons.forEach((btn) => {
+        btn.classList.remove("border-primary", "text-primary");
+        btn.classList.add("border-gray-200");
+      });
+      this.classList.remove("border-gray-200");
+      this.classList.add("border-primary", "text-primary");
+    });
+  });
+});
+</script>
+<style>
+#mainCarousel img {
+  transition: opacity 0.2s ease-in-out;
+}
+.ri-heart-line, .ri-heart-fill {
+  transition: transform 0.2s ease-in-out;
+}
+</style>
+<footer class="bg-gray-900 text-white mt-20">
+<div class="max-w-7xl mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+<p class="text-gray-400 text-sm">Creando sonrisas y momentos especiales con nuestros peluches desde 2020.</p>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-4">Enlaces</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Productos</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Colecciones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Sobre nosotros</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-4">Ayuda</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Envíos</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Devoluciones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-4">Síguenos</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+<div class="mt-6">
+<h4 class="font-medium mb-2">Suscríbete a nuestro newsletter</h4>
+<form class="flex">
+<input type="email" placeholder="Tu email" class="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 border-none text-white placeholder-gray-400">
+<button type="submit" class="px-4 py-2 bg-primary text-white rounded-r-lg hover:bg-primary/90 !rounded-button">Enviar</button>
+</form>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 Logo. Todos los derechos reservados.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm">Privacidad</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Términos</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

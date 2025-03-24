@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              secondary: "#4F46E5",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .hero-gradient {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      }
+      .dark-gradient {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.8) 0%, rgba(17, 24, 39, 1) 100%);
+      }
+      .carousel {
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      }
+      .carousel-item {
+      scroll-snap-align: start;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="#" class="font-['Pacifico'] text-2xl text-primary">logo</a>
+          <div class="hidden md:flex space-x-8">
+            <a href="#inicio" class="text-gray-700 hover:text-primary"
+              >Inicio</a
+            >
+            <a href="#tienda" class="text-gray-700 hover:text-primary"
+              >Tienda</a
+            >
+            <a href="#juegos" class="text-gray-700 hover:text-primary"
+              >Nuestros Juegos</a
+            >
+            <a href="#blog" class="text-gray-700 hover:text-primary">Blog</a>
+            <a href="#contacto" class="text-gray-700 hover:text-primary"
+              >Contacto</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="hero" class="pt-16">
+      <div class="relative overflow-hidden">
+        <div class="carousel flex w-full overflow-x-auto">
+          <div class="carousel-item flex-none w-full relative">
+            <div class="h-[600px] relative">
+              <img
+                src="https://public.readdy.ai/ai/img_res/5b87f0c169562eb5764922210038e0fd.jpg"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
+              >
+                <div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+                  <div class="max-w-xl">
+                    <h1 class="text-5xl font-bold text-white mb-4">
+                      REYNA DUELIST
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8">
+                      Domina el campo de batalla con habilidades únicas y
+                      estrategias letales
+                    </p>
+                    <div class="flex space-x-4">
+                      <button
+                        class="bg-primary text-white px-6 py-2 rounded-button"
+                      >
+                        VER MÁS
+                      </button>
+                      <button
+                        class="border border-white text-white px-6 py-2 rounded-button"
+                      >
+                        SUSCRIBIRSE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item flex-none w-full relative">
+            <div class="h-[600px] relative">
+              <img
+                src="https://public.readdy.ai/ai/img_res/9936610b88ef7f9dac94e71dc49494a5.jpg"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
+              >
+                <div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+                  <div class="max-w-xl">
+                    <h1 class="text-5xl font-bold text-white mb-4">
+                      REALIDAD VIRTUAL
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8">
+                      Sumérgete en mundos virtuales con nuestra tecnología de
+                      última generación
+                    </p>
+                    <div class="flex space-x-4">
+                      <button
+                        class="bg-primary text-white px-6 py-2 rounded-button"
+                      >
+                        EXPLORAR
+                      </button>
+                      <button
+                        class="border border-white text-white px-6 py-2 rounded-button"
+                      >
+                        DEMO
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item flex-none w-full relative">
+            <div class="h-[600px] relative">
+              <img
+                src="https://public.readdy.ai/ai/img_res/1a1831bf5a23b7ac4f8f81b518f8c4c9.jpg"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"
+              >
+                <div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+                  <div class="max-w-xl">
+                    <h1 class="text-5xl font-bold text-white mb-4">
+                      BATALLA ÉPICA
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8">
+                      Únete a la batalla más grande jamás vista en el mundo del
+                      gaming
+                    </p>
+                    <div class="flex space-x-4">
+                      <button
+                        class="bg-primary text-white px-6 py-2 rounded-button"
+                      >
+                        JUGAR AHORA
+                      </button>
+                      <button
+                        class="border border-white text-white px-6 py-2 rounded-button"
+                      >
+                        TORNEO
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+        >
+          <button
+            class="w-2 h-2 rounded-full bg-white carousel-dot"
+            data-slide="0"
+          ></button>
+          <button
+            class="w-2 h-2 rounded-full bg-white/50 carousel-dot"
+            data-slide="1"
+          ></button>
+          <button
+            class="w-2 h-2 rounded-full bg-white/50 carousel-dot"
+            data-slide="2"
+          ></button>
+        </div>
+        <button
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition-colors"
+          id="prevSlide"
+        >
+          <i class="ri-arrow-left-s-line text-2xl"></i>
+        </button>
+        <button
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition-colors"
+          id="nextSlide"
+        >
+          <i class="ri-arrow-right-s-line text-2xl"></i>
+        </button>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const slides = document.querySelectorAll(".carousel-item");
+        const dots = document.querySelectorAll(".carousel-dot");
+        const prevButton = document.getElementById("prevSlide");
+        const nextButton = document.getElementById("nextSlide");
+        let currentSlide = 0;
+        let autoplayInterval;
+        function updateSlide(index) {
+          carousel.scrollTo({
+            left: slides[index].offsetLeft,
+            behavior: "smooth",
+          });
+          dots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.remove("bg-white/50");
+              dot.classList.add("bg-white");
+            } else {
+              dot.classList.add("bg-white/50");
+              dot.classList.remove("bg-white");
+            }
+          });
+          currentSlide = index;
+        }
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlide(currentSlide);
+        }
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateSlide(currentSlide);
+        }
+        function startAutoplay() {
+          autoplayInterval = setInterval(nextSlide, 5000);
+        }
+        function stopAutoplay() {
+          clearInterval(autoplayInterval);
+        }
+        prevButton.addEventListener("click", () => {
+          stopAutoplay();
+          prevSlide();
+          startAutoplay();
+        });
+        nextButton.addEventListener("click", () => {
+          stopAutoplay();
+          nextSlide();
+          startAutoplay();
+        });
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            stopAutoplay();
+            updateSlide(index);
+            startAutoplay();
+          });
+        });
+        carousel.addEventListener("mouseenter", stopAutoplay);
+        carousel.addEventListener("mouseleave", startAutoplay);
+        startAutoplay();
+      });
+    </script>
+    <section id="que-hacemos" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">
+              ENTONCES ¿QUÉ HACEMOS?
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Desarrollamos e innovamos productos, en su mayoría videojuegos que
+              inspiran y entretienen a millones de personas alrededor del mundo.
+            </p>
+            <p class="text-gray-600">
+              Nuestro equipo de expertos trabaja incansablemente para crear
+              experiencias únicas y memorables que conectan a jugadores de todo
+              el mundo.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://public.readdy.ai/ai/img_res/e4b67ad0ea614a0aa96e2cc028a20e91.jpg"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="actualidad" class="py-20 bg-[#0A1921]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center mb-12">
+          <h2 class="text-4xl font-bold text-white">Actualidad</h2>
+          <a
+            href="#"
+            class="text-white bg-white/10 px-4 py-2 rounded-button hover:bg-white/20 transition-colors"
+            >VER TODO</a
+          >
+        </div>
+        <div class="space-y-4">
+          <div
+            class="group bg-[#132731] rounded-lg overflow-hidden hover:bg-[#1B3441] transition-colors"
+          >
+            <a href="#" class="flex items-center gap-6 p-6">
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-4">
+                  <div
+                    class="w-8 h-8 rounded-full bg-[#1B3441] flex items-center justify-center"
+                  >
+                    <i class="ri-gamepad-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">DENTRO DE RIOT</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Lo aprendido de Hacia Arcane
+                </h3>
+              </div>
+              <img
+                src="https://public.readdy.ai/ai/img_res/ecbf28b30272a81da2091245549f0474.jpg"
+                class="w-48 h-32 object-cover rounded-lg"
+              />
+            </a>
+          </div>
+          <div
+            class="group bg-[#132731] rounded-lg overflow-hidden hover:bg-[#1B3441] transition-colors"
+          >
+            <a href="#" class="flex items-center gap-6 p-6">
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-4">
+                  <div
+                    class="w-8 h-8 rounded-full bg-[#1B3441] flex items-center justify-center"
+                  >
+                    <i class="ri-newspaper-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">NOTICIAS</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Actualización de marzo de 2025 | Dev Snack...
+                </h3>
+              </div>
+              <img
+                src="https://public.readdy.ai/ai/img_res/fa86d1f25bee85a82a68492cf41d005b.jpg"
+                class="w-48 h-32 object-cover rounded-lg"
+              />
+            </a>
+          </div>
+          <div
+            class="group bg-[#132731] rounded-lg overflow-hidden hover:bg-[#1B3441] transition-colors"
+          >
+            <a href="#" class="flex items-center gap-6 p-6">
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-4">
+                  <div
+                    class="w-8 h-8 rounded-full bg-[#1B3441] flex items-center justify-center"
+                  >
+                    <i class="ri-vidicon-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">NOTICIAS</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  AMANECER // Tráiler de agente de Waylay -...
+                </h3>
+              </div>
+              <img
+                src="https://public.readdy.ai/ai/img_res/29676b173d9a93b649e071ee0b623a0f.jpg"
+                class="w-48 h-32 object-cover rounded-lg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="juegos" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-gray-900">Nuestros Juegos</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="https://public.readdy.ai/ai/img_res/fffca34bf27b260efdca2ee10a28d9b8.jpg"
+              class="w-full h-64 object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                League of Legends
+              </h3>
+              <p
+                class="text-white/80 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              >
+                Un juego de estrategia por equipos en el que dos equipos de
+                cinco campeones se enfrentan para destruir la base del otro.
+              </p>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="https://public.readdy.ai/ai/img_res/3815cecde5c051fceb36510987654e48.jpg"
+              class="w-full h-64 object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">Valorant</h3>
+              <p
+                class="text-white/80 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              >
+                Un shooter táctico 5v5 basado en personajes donde la creatividad
+                es tu mejor arma.
+              </p>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="https://public.readdy.ai/ai/img_res/780a5538912bbf8c5bc770d4f6bd6009.jpg"
+              class="w-full h-64 object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                Teamfight Tactics
+              </h3>
+              <p
+                class="text-white/80 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              >
+                Un juego de estrategia por rondas donde armas un equipo de
+                campeones para luchar por la victoria.
+              </p>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="https://public.readdy.ai/ai/img_res/5ebdd4f8835521e1323fbbf8bb05b0d9.jpg"
+              class="w-full h-64 object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">Wild Rift</h3>
+              <p
+                class="text-white/80 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              >
+                League of Legends: Wild Rift lleva la magia del LoL a
+                dispositivos móviles con controles adaptados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="espectaculos" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-center text-[40px] font-bold mb-20 text-primary">
+          NUESTROS ESPECTÁCULOS
+        </h2>
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div
+              class="flex transition-transform duration-500 espectaculos-carousel"
+            >
+              <div class="flex-none w-1/4 px-4">
+                <div class="relative group">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/c962915b0261c3ac2195df6aff42a5bd.jpg"
+                    class="w-full h-[450px] object-cover rounded-lg"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg"
+                  ></div>
+                  <h3
+                    class="absolute bottom-6 left-6 text-2xl font-bold text-white"
+                  >
+                    MURDER DRONES
+                  </h3>
+                </div>
+              </div>
+              <div class="flex-none w-1/4 px-4">
+                <div class="relative group">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/135124bd8b039f3f764974d921ce50f4.jpg"
+                    class="w-full h-[450px] object-cover rounded-lg"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg"
+                  ></div>
+                  <h3
+                    class="absolute bottom-6 left-6 text-2xl font-bold text-white"
+                  >
+                    GASLIGHT
+                  </h3>
+                </div>
+              </div>
+              <div class="flex-none w-1/4 px-4">
+                <div class="relative group">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/f97b42e53486c2ce5294a14f73d8cc9b.jpg"
+                    class="w-full h-[450px] object-cover rounded-lg"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg"
+                  ></div>
+                  <h3
+                    class="absolute bottom-6 left-6 text-2xl font-bold text-white"
+                  >
+                    KNIGHTS CHRONICLE
+                  </h3>
+                </div>
+              </div>
+              <div class="flex-none w-1/4 px-4">
+                <div class="relative group">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/d97d439a693ff7d8a1cbc868f6a9ddcf.jpg"
+                    class="w-full h-[450px] object-cover rounded-lg"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg"
+                  ></div>
+                  <h3
+                    class="absolute bottom-6 left-6 text-2xl font-bold text-white"
+                  >
+                    SUNSET PARADISE
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/50 transition-colors z-10"
+            id="prevEspectaculo"
+          >
+            <i class="ri-arrow-left-s-line text-2xl"></i>
+          </button>
+          <button
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/50 transition-colors z-10"
+            id="nextEspectaculo"
+          >
+            <i class="ri-arrow-right-s-line text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-gray-900">
+          Preguntas Frecuentes
+        </h2>
+        <div class="space-y-4">
+          <div class="border rounded-lg">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              ¿Por qué necesitamos usar lógica?
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+          </div>
+          <div class="border rounded-lg">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              ¿Necesitamos pagar 6 meses por adelantado?
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+          </div>
+          <div class="border rounded-lg">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              ¿Cómo migrar desde otro servicio?
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <button class="bg-primary text-white px-6 py-2 rounded-button">
+            <i class="ri-mail-line mr-2"></i>
+            Envíanos un correo para otras preguntas
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="asociaciones" class="py-20 bg-gray-50 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="relative">
+          <div class="flex logos-slide animate-slide">
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Simple modern tech company logo, minimalist design&width=150&height=50&seq=12&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Gaming company logo design, modern and sleek&width=150&height=50&seq=13&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Entertainment brand logo, contemporary style&width=150&height=50&seq=14&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Digital media company logo, professional design&width=150&height=50&seq=15&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Simple modern tech company logo, minimalist design&width=150&height=50&seq=12&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Gaming company logo design, modern and sleek&width=150&height=50&seq=13&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Entertainment brand logo, contemporary style&width=150&height=50&seq=14&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex items-center justify-center min-w-[200px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=Digital media company logo, professional design&width=150&height=50&seq=15&orientation=landscape"
+                class="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        @keyframes slide {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(-100%);
+        }
+        }
+        .animate-slide {
+        animation: slide 20s linear infinite;
+        }
+        .logos-slide {
+        display: inline-flex;
+        }
+      </style>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="font-['Pacifico'] text-2xl text-white mb-4 block"
+              >logo</a
+            >
+            <p class="text-gray-400">Creando experiencias únicas desde 2010</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Servicios</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>Juegos Móviles</li>
+              <li>Shows Profesionales</li>
+              <li>Eventos Corporativos</li>
+              <li>Nuevas Tendencias</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Contacto</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>info@gaming.com</li>
+              <li>+34 955 123 456</li>
+              <li>Madrid, España</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Síguenos</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>© 2025 Producciones Mágicas. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 transition-opacity duration-300"
+    >
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const espectaculosCarousel = document.querySelector(".espectaculos-carousel");
+        const prevEspectaculo = document.getElementById("prevEspectaculo");
+        const nextEspectaculo = document.getElementById("nextEspectaculo");
+        let currentEspectaculo = 0;
+        const totalEspectaculos = 4;
+        function updateEspectaculosCarousel() {
+          espectaculosCarousel.style.transform = `translateX(-${currentEspectaculo * 25}%)`;
+        }
+        prevEspectaculo.addEventListener("click", () => {
+          currentEspectaculo =
+            (currentEspectaculo - 1 + totalEspectaculos) % totalEspectaculos;
+          updateEspectaculosCarousel();
+        });
+        nextEspectaculo.addEventListener("click", () => {
+          currentEspectaculo = (currentEspectaculo + 1) % totalEspectaculos;
+          updateEspectaculosCarousel();
+        });
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 100) {
+            backToTop.classList.remove("opacity-0");
+          } else {
+            backToTop.classList.add("opacity-0");
+          }
+        });
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        const faqButtons = document.querySelectorAll("#faq button");
+        faqButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector("i");
+            if (content && content.classList.contains("hidden")) {
+              content.classList.remove("hidden");
+              icon.classList.replace("ri-arrow-down-s-line", "ri-arrow-up-s-line");
+            } else if (content) {
+              content.classList.add("hidden");
+              icon.classList.replace("ri-arrow-up-s-line", "ri-arrow-down-s-line");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Glitch Producciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6B46C1",
+              secondary: "#4A5568",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .carousel {
+      animation: slide 40s infinite linear;
+      }
+      @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen">
+    <nav class="bg-gray-800 fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-xl font-bold">Glitch Producciones</a>
+          </div>
+          <div class="flex items-center space-x-8">
+            <a href="#" class="hover:text-primary transition-colors">Hogar</a>
+            <a href="#" class="hover:text-primary transition-colors"
+              >Acerca de</a
+            >
+            <a href="#" class="hover:text-primary transition-colors"
+              >Nuestros espectáculos</a
+            >
+            <a href="#" class="hover:text-primary transition-colors"
+              >Carreras</a
+            >
+            <a href="#" class="text-primary">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="flex min-h-screen pt-16">
+      <div
+        class="w-2/5 relative overflow-hidden"
+        style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);"
+      >
+        <div class="carousel flex absolute h-full">
+          <img
+            src="https://public.readdy.ai/ai/img_res/8112eae4ef7e184ca00065ff61b0a757.jpg"
+            class="object-cover h-full"
+            alt="Imagen 1"
+          />
+          <img
+            src="https://public.readdy.ai/ai/img_res/040542c4a0cb67f4de7d555f8a320115.jpg"
+            class="object-cover h-full"
+            alt="Imagen 2"
+          />
+          <img
+            src="https://public.readdy.ai/ai/img_res/3170f1cafc249f8e4b5daa4812b02b90.jpg"
+            class="object-cover h-full"
+            alt="Imagen 3"
+          />
+          <img
+            src="https://public.readdy.ai/ai/img_res/afafb78428122372b64c584aa6335788.jpg"
+            class="object-cover h-full"
+            alt="Imagen 4"
+          />
+        </div>
+      </div>
+      <div class="w-3/5 p-12">
+        <h1 class="text-4xl font-bold mb-8">Contacto</h1>
+        <form id="contactForm" class="space-y-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block mb-2">Nombre de pila *</label>
+              <input
+                type="text"
+                required
+                class="w-full p-3 bg-gray-700 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div>
+              <label class="block mb-2">Apellido *</label>
+              <input
+                type="text"
+                required
+                class="w-full p-3 bg-gray-700 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block mb-2">Correo electrónico *</label>
+            <input
+              type="email"
+              required
+              class="w-full p-3 bg-gray-700 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label class="block mb-2">Sujeto *</label>
+            <input
+              type="text"
+              required
+              class="w-full p-3 bg-gray-700 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label class="block mb-2">Déjenos un mensaje</label>
+            <textarea
+              rows="5"
+              class="w-full p-3 bg-gray-700 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary text-white py-3 px-6 rounded-button hover:bg-primary/90 transition-colors cursor-pointer"
+          >
+            Entregar
+          </button>
+        </form>
+        <footer class="mt-12 text-center">
+          <p class="mb-4">© 2025, por Glitch Producciones</p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="hover:text-primary transition-colors">
+              <i class="ri-youtube-fill ri-xl"></i>
+            </a>
+            <a href="#" class="hover:text-primary transition-colors">
+              <i class="ri-twitter-fill ri-xl"></i>
+            </a>
+            <a href="#" class="hover:text-primary transition-colors">
+              <i class="ri-instagram-fill ri-xl"></i>
+            </a>
+            <a href="#" class="hover:text-primary transition-colors">
+              <i class="ri-pinterest-fill ri-xl"></i>
+            </a>
+            <a href="#" class="hover:text-primary transition-colors">
+              <i class="ri-vimeo-fill ri-xl"></i>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const successMessage = document.createElement("div");
+        successMessage.className =
+          "fixed top-4 right-4 bg-green-500 text-white p-4 rounded-button";
+        successMessage.textContent = "Mensaje enviado con éxito";
+        document.body.appendChild(successMessage);
+        setTimeout(() => successMessage.remove(), 3000);
+        this.reset();
+      });
+    </script>
+  </body>
+</html>

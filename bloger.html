@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog de Gaming y Esports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366f1",
+              secondary: "#4f46e5",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .carousel-item {
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      }
+      .carousel-item.active {
+      display: block;
+      }
+      .carousel-dot.active {
+      background-color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen">
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-4">
+          <h1 class="text-2xl font-['Pacifico'] text-primary">logo</h1>
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="text-gray-700 hover:text-primary">Inicio</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Noticias</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Esports</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Guías</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Buscar..."
+              class="pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <i
+              class="ri-search-line absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            ></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="pt-20">
+      <div class="container mx-auto px-4">
+        <div
+          id="carousel"
+          class="relative h-[500px] mb-12 rounded-lg overflow-hidden"
+        >
+          <div class="carousel-item active">
+            <div class="relative h-full">
+              <img
+                src="https://public.readdy.ai/ai/img_res/3f22dff3a128170566ba992925d9b402.jpg"
+                class="w-full h-full object-cover"
+                alt="Gaming News"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center"
+              >
+                <div class="text-white p-12 max-w-2xl">
+                  <span class="bg-primary px-4 py-1 rounded-full text-sm"
+                    >Destacado</span
+                  >
+                  <h2 class="text-4xl font-bold mt-4 mb-4">
+                    Torneo Internacional de League of Legends 2025
+                  </h2>
+                  <p class="text-lg mb-6">
+                    Los mejores equipos del mundo se enfrentan en la competición
+                    más importante del año.
+                  </p>
+                  <a
+                    href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                    data-readdy="true"
+                    class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-button"
+                    >Leer más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="relative h-full">
+              <img
+                src="https://public.readdy.ai/ai/img_res/522b0f6d8a625cc53cf68cef18652c2e.jpg"
+                class="w-full h-full object-cover"
+                alt="Gaming News"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center"
+              >
+                <div class="text-white p-12 max-w-2xl">
+                  <span class="bg-primary px-4 py-1 rounded-full text-sm"
+                    >Evento Especial</span
+                  >
+                  <h2 class="text-4xl font-bold mt-4 mb-4">
+                    Mundial de Valorant 2025
+                  </h2>
+                  <p class="text-lg mb-6">
+                    La élite mundial se reúne en Madrid para la competición más
+                    esperada del año.
+                  </p>
+                  <a
+                    href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                    data-readdy="true"
+                    class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-button"
+                    >Leer más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="relative h-full">
+              <img
+                src="https://public.readdy.ai/ai/img_res/68cc88c566cf7d53fbb1848d10f0fe1d.jpg"
+                class="w-full h-full object-cover"
+                alt="Gaming News"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center"
+              >
+                <div class="text-white p-12 max-w-2xl">
+                  <span class="bg-primary px-4 py-1 rounded-full text-sm"
+                    >Tecnología</span
+                  >
+                  <h2 class="text-4xl font-bold mt-4 mb-4">
+                    El Futuro del Gaming VR
+                  </h2>
+                  <p class="text-lg mb-6">
+                    Descubre las últimas innovaciones en realidad virtual para
+                    gaming.
+                  </p>
+                  <a
+                    href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                    data-readdy="true"
+                    class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-button"
+                    >Leer más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full text-white"
+            onclick="prevSlide()"
+          >
+            <i class="ri-arrow-left-line ri-xl"></i>
+          </button>
+          <button
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full text-white"
+            onclick="nextSlide()"
+          >
+            <i class="ri-arrow-right-line ri-xl"></i>
+          </button>
+          <div
+            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+          >
+            <button
+              class="w-2 h-2 rounded-full bg-white/50 carousel-dot active"
+              onclick="goToSlide(0)"
+            ></button>
+            <button
+              class="w-2 h-2 rounded-full bg-white/50 carousel-dot"
+              onclick="goToSlide(1)"
+            ></button>
+            <button
+              class="w-2 h-2 rounded-full bg-white/50 carousel-dot"
+              onclick="goToSlide(2)"
+            ></button>
+          </div>
+        </div>
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold mb-6">Actualidad</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article
+              class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/7d335ec91a9e473d3ecd232a06fbcd24.jpg"
+                class="w-full h-48 object-cover"
+                alt="News 1"
+              />
+              <div class="p-6">
+                <span class="text-sm text-primary">Esports</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">
+                  Nuevo récord mundial en Valorant
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  El jugador español marca un nuevo hito en la historia del
+                  juego competitivo.
+                </p>
+                <a
+                  href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                  data-readdy="true"
+                  class="text-primary hover:text-secondary flex items-center"
+                >
+                  Leer más <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+              </div>
+            </article>
+            <article
+              class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/10bdf9918075eaaaeccc0387720e7986.jpg"
+                class="w-full h-48 object-cover"
+                alt="News 2"
+              />
+              <div class="p-6">
+                <span class="text-sm text-primary">Torneos</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">
+                  Final Mundial de Dota 2
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  La gran final reúne a más de 2 millones de espectadores en
+                  línea.
+                </p>
+                <a
+                  href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                  data-readdy="true"
+                  class="text-primary hover:text-secondary flex items-center"
+                >
+                  Leer más <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+              </div>
+            </article>
+            <article
+              class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/1cf31acaffff7928ca7754e9ba632903.jpg"
+                class="w-full h-48 object-cover"
+                alt="News 3"
+              />
+              <div class="p-6">
+                <span class="text-sm text-primary">Tecnología</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">
+                  Nueva generación de GPUs gaming
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Las tarjetas gráficas del futuro prometen revolucionar el
+                  gaming.
+                </p>
+                <a
+                  href="https://readdy.ai/home/e6a006f4-09a9-4b74-9d12-338127f5d59b/a8dbc800-c20f-42b6-b223-962700e5f241"
+                  data-readdy="true"
+                  class="text-primary hover:text-secondary flex items-center"
+                >
+                  Leer más <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold mb-6">Últimas Noticias</h2>
+          <div class="space-y-6">
+            <article
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition flex gap-6"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/ffdbb6c4a541338af2c3330dbec95072.jpg"
+                class="w-48 h-32 object-cover rounded"
+                alt="News"
+              />
+              <div>
+                <span class="text-sm text-primary">Estrategia</span>
+                <h3 class="text-xl font-bold mt-2 mb-2">
+                  Guía completa: Tácticas avanzadas en CS2
+                </h3>
+                <p class="text-gray-600">
+                  Aprende las mejores estrategias para dominar el nuevo
+                  Counter-Strike 2.
+                </p>
+              </div>
+            </article>
+            <article
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition flex gap-6"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/920c17db533d1d7ee8991128ff8cb53e.jpg"
+                class="w-48 h-32 object-cover rounded"
+                alt="News"
+              />
+              <div>
+                <span class="text-sm text-primary">Comunidad</span>
+                <h3 class="text-xl font-bold mt-2 mb-2">
+                  Evento Gaming Barcelona 2025
+                </h3>
+                <p class="text-gray-600">
+                  El mayor evento de gaming español anuncia fechas y
+                  participantes.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <div class="text-center mb-12">
+          <button
+            id="loadMore"
+            class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button"
+          >
+            Cargar más noticias
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-['Pacifico'] text-2xl mb-4">logo</h3>
+            <p class="text-gray-400">
+              Tu fuente de noticias sobre gaming y esports
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Secciones</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white">Inicio</a></li>
+              <li><a href="#" class="hover:text-white">Noticias</a></li>
+              <li><a href="#" class="hover:text-white">Esports</a></li>
+              <li><a href="#" class="hover:text-white">Guías</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Redes Sociales</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-twitter-fill ri-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-facebook-fill ri-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-instagram-fill ri-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Newsletter</h4>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="px-4 py-2 rounded-l-button focus:outline-none focus:ring-2 focus:ring-primary text-gray-900"
+              />
+              <button
+                class="bg-primary hover:bg-secondary px-4 py-2 rounded-r-button"
+              >
+                Suscribir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const carousel = document.getElementById("carousel");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      const carouselDots = document.querySelectorAll(".carousel-dot");
+      let currentSlide = 0;
+      let slideInterval;
+      function showSlide(index) {
+        carouselItems.forEach((item) => item.classList.remove("active"));
+        carouselDots.forEach((dot) => dot.classList.remove("active"));
+        carouselItems[index].classList.add("active");
+        carouselDots[index].classList.add("active");
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % carouselItems.length;
+        showSlide(currentSlide);
+        resetInterval();
+      }
+      function prevSlide() {
+        currentSlide =
+          (currentSlide - 1 + carouselItems.length) % carouselItems.length;
+        showSlide(currentSlide);
+        resetInterval();
+      }
+      function goToSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+        resetInterval();
+      }
+      function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+      slideInterval = setInterval(nextSlide, 5000);
+      carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
+      carousel.addEventListener("mouseleave", () => {
+        slideInterval = setInterval(nextSlide, 5000);
+      });
+      document.getElementById("loadMore").addEventListener("click", function () {
+        const notification = document.createElement("div");
+        notification.className =
+          "fixed bottom-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-lg";
+        notification.textContent = "Cargando más noticias...";
+        document.body.appendChild(notification);
+        setTimeout(() => {
+          notification.remove();
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
