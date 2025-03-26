@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B2CBF',
+                        secondary: '#FF4655'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        .news-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card {
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .carousel {
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .partner-logo {
+            filter: grayscale(100%);
+            transition: opacity 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-black overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div class="absolute inset-0">
+            <img src="https://public.readdy.ai/ai/img_res/7a7b206452e6bae3d48c6841d2f561a0.jpg" class="w-full h-full object-cover" alt="Hero Background">
+        </div>
+        <div class="relative z-20 container mx-auto px-6 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-6xl font-bold mb-4">
+                    <span class="text-primary">REYNA</span>
+                    <span class="block">DUELISTA</span>
+                </h1>
+                <p class="text-xl mb-8 max-w-lg">Domina el campo de batalla con poderes sobrenaturales y precisión letal</p>
+                <div class="flex gap-4">
+                    <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-opacity-90">VER MÁS</button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white hover:text-black">SUSCRIBIR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-blue-400 mb-6">ENTONCES ¿QUÉ HACEMOS?</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Desarrollamos experiencias únicas que transforman la manera en que juegas. Nuestro equipo está dedicado a crear mundos inmersivos donde cada decisión cuenta y cada momento es una nueva aventura. Con tecnología de vanguardia y creatividad sin límites, estamos redefiniendo el futuro del gaming.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://public.readdy.ai/ai/img_res/cc8a1917943a49b33340256f740d65b3.jpg" class="rounded-lg shadow-xl" alt="Gaming Characters">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">Actualidad</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/a5e4d15f11c8c918cdb0c60376db2039.jpg" class="w-full h-48 object-cover" alt="Esports News">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gran Final del Torneo Mundial</h3>
+                        <p class="text-gray-600">Los mejores equipos se enfrentan en una batalla épica por la gloria.</p>
+                    </div>
+                </div>
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/1e11d84dac6f9c96bb8b0cd4713a9b5f.jpg" class="w-full h-48 object-cover" alt="New Character">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Nuevo Personaje Revelado</h3>
+                        <p class="text-gray-600">Descubre las habilidades únicas del nuevo agente que llegará pronto.</p>
+                    </div>
+                </div>
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/12d356ce54dfaf2d62dfd5ff3a937171.jpg" class="w-full h-48 object-cover" alt="Community Event">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Evento Comunitario</h3>
+                        <p class="text-gray-600">Únete a la celebración más grande de nuestra comunidad gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">Nuestros Juegos</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="game-card relative overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/70680ded995a799bc2ba0c373ca782f7.jpg" class="w-full h-64 object-cover" alt="League of Legends">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end p-6">
+                        <h3 class="text-white text-2xl font-bold">League of Legends</h3>
+                    </div>
+                </div>
+                <div class="game-card relative overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/50667987ca77f9ec65170b86631baa1b.jpg" class="w-full h-64 object-cover" alt="Valorant">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end p-6">
+                        <h3 class="text-white text-2xl font-bold">Valorant</h3>
+                    </div>
+                </div>
+                <div class="game-card relative overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/8318b57244a6dfa16eb8a22a6750ad56.jpg" class="w-full h-64 object-cover" alt="Teamfight Tactics">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end p-6">
+                        <h3 class="text-white text-2xl font-bold">Teamfight Tactics</h3>
+                    </div>
+                </div>
+                <div class="game-card relative overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/c5edbd8fd0e80c4eff4c6206b7066ed7.jpg" class="w-full h-64 object-cover" alt="League Mobile">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end p-6">
+                        <h3 class="text-white text-2xl font-bold">League Mobile</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section class="py-20 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">
+                <span class="text-primary">NUESTROS</span>
+                <span class="block">ESPECTÁCULOS</span>
+            </h2>
+            <div class="flex gap-6 carousel">
+                <div class="min-w-[300px] bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/336ae61e76cd6e932f28b156287e4f1f.jpg" class="w-full h-40 object-cover" alt="Show 1">
+                    <div class="p-4">
+                        <h3 class="font-bold">Cyber Revolution</h3>
+                    </div>
+                </div>
+                <div class="min-w-[300px] bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/3ef4196e9335944e90e51c70428e46cf.jpg" class="w-full h-40 object-cover" alt="Show 2">
+                    <div class="p-4">
+                        <h3 class="font-bold">Bosque Mágico</h3>
+                    </div>
+                </div>
+                <div class="min-w-[300px] bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/0debc00d806afb7b6dd62fe1043a15e4.jpg" class="w-full h-40 object-cover" alt="Show 3">
+                    <div class="p-4">
+                        <h3 class="font-bold">Guerra Espacial</h3>
+                    </div>
+                </div>
+                <div class="min-w-[300px] bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/ad87de93c69e6d179727620be2696af9.jpg" class="w-full h-40 object-cover" alt="Show 4">
+                    <div class="p-4">
+                        <h3 class="font-bold">Arena Champions</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">Preguntas Frecuentes</h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <details class="faq-item bg-gray-50 rounded-lg">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer">
+                        <span class="font-medium">¿Cómo puedo unirme a la comunidad?</span>
+                        <i class="ri-arrow-down-s-line faq-icon transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">Únete a través de nuestro Discord oficial o regístrate en nuestra plataforma para acceder a todos los beneficios de la comunidad.</p>
+                    </div>
+                </details>
+                <details class="faq-item bg-gray-50 rounded-lg">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer">
+                        <span class="font-medium">¿Cuáles son los requisitos técnicos?</span>
+                        <i class="ri-arrow-down-s-line faq-icon transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">Los requisitos varían según el juego. Consulta la página específica de cada título para más detalles.</p>
+                    </div>
+                </details>
+                <details class="faq-item bg-gray-50 rounded-lg">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer">
+                        <span class="font-medium">¿Cómo reporto un problema técnico?</span>
+                        <i class="ri-arrow-down-s-line faq-icon transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">Utiliza nuestro sistema de soporte en línea o contacta directamente con nuestro equipo de asistencia técnica.</p>
+                    </div>
+                </details>
+                <details class="faq-item bg-gray-50 rounded-lg">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer">
+                        <span class="font-medium">¿Qué métodos de pago aceptan?</span>
+                        <i class="ri-arrow-down-s-line faq-icon transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">Aceptamos tarjetas de crédito/débito, PayPal y diversos métodos de pago locales según tu región.</p>
+                    </div>
+                </details>
+                <details class="faq-item bg-gray-50 rounded-lg">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer">
+                        <span class="font-medium">¿Tienen programa de afiliados?</span>
+                        <i class="ri-arrow-down-s-line faq-icon transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">Sí, contamos con un programa de afiliados para creadores de contenido y streamers.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                <div class="partner-logo w-32 h-32 flex items-center justify-center">
+                    <i class="ri-twitch-fill text-5xl text-gray-600"></i>
+                </div>
+                <div class="partner-logo w-32 h-32 flex items-center justify-center">
+                    <i class="ri-discord-fill text-5xl text-gray-600"></i>
+                </div>
+                <div class="partner-logo w-32 h-32 flex items-center justify-center">
+                    <i class="ri-steam-fill text-5xl text-gray-600"></i>
+                </div>
+                <div class="partner-logo w-32 h-32 flex items-center justify-center">
+                    <i class="ri-playstation-fill text-5xl text-gray-600"></i>
+                </div>
+                <div class="partner-logo w-32 h-32 flex items-center justify-center">
+                    <i class="ri-xbox-fill text-5xl text-gray-600"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-2xl mb-4">logo</h3>
+                    <p class="text-gray-400">Creando el futuro del gaming</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Juegos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Noticias</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Soporte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Redes Sociales</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-twitter-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-facebook-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-instagram-fill text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <p class="text-gray-400">support@gaming.com</p>
+                    <p class="text-gray-400">+34 900 123 456</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Gaming Portal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const icon = item.querySelector('.faq-icon');
+                icon.style.transform = item.hasAttribute('open') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html>
