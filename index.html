@@ -1,132 +1,567 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArmyOfLegends</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Contacts</a>
-            <a href="">Info</a>
-        </nav>
-    </header>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juegos Mágicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="sty.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
 
-    <!-- carousel -->
-    <div class="carousel">
-        <!-- list item -->
-        <div class="list">
-            <div class="item">
-                <img src="https://i.postimg.cc/gJ7ksXZb/img8.jpg">
-                <div class="content">
-                    <div class="title reyna">REYNA</div>
-                    <div class="topic">DUELIST</div>
-
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/6TJ6skcH/img4.jpg">
-                <div class="content">
-                    <div class="title jett">JETT</div>
-                    <div class="topic">DUELIST</div>
-
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/tRLFC7mc/img6.jpg">
-                <div class="content">
-                    <div class="title phoenix">PHOENIX</div>
-                    <div class="topic">DUELIST</div>
-
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/SRzQvS62/img11.jpg">
-                <div class="content">
-                    <div class="title viper">VIPER</div>
-                    <div class="topic">CONTROLLER</div>
-
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
+  </head>
+  <body class="bg-gray-900 min-h-screen">
+    <nav
+      class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-800"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-primary">Inicio</a>
+          <a href="#" class="text-gray-300 hover:text-primary">Blog</a>
+          <a href="#" class="text-gray-300 hover:text-primary">Juegos</a>
+          <a href="#" class="text-gray-300 hover:text-primary">Contacto</a>
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90"
+          >
+            Suscribir
+          </button>
         </div>
-
-        <!-- list thumnail -->
-        <div class="thumbnail">
-            <div class="item">
-                <img src="https://i.postimg.cc/gJ7ksXZb/img8.jpg">
-                <div class="content">
-                    <div class="title">
-                        REYNA
-                    </div>
-                    <div class="description">
-                        DEVOUR
-                    </div>
-                </div>
+      </div>
+    </nav>
+    <section class="relative pt-20 min-h-screen flex items-center">
+      <div class="w-full">
+        <div
+          class="carousel relative overflow-hidden w-full h-screen"
+          id="hero-carousel"
+        >
+          <div class="carousel-item absolute w-full h-full">
+            <div class="absolute inset-0">
+              <img
+                src="https://public.readdy.ai/ai/img_res/dfb6cd96effddc76ad286c0970fce01b.jpg"
+                class="w-full h-full object-cover"
+                alt="Hero"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
+              ></div>
             </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/6TJ6skcH/img4.jpg">
-                <div class="content">
-                    <div class="title">
-                        JETT
-                    </div>
-                    <div class="description">
-                        UPWARD BURST
-                    </div>
+            <div
+              class="relative z-10 flex items-center h-full container mx-auto px-6"
+            >
+              <div class="w-1/2 text-white">
+                <h1 class="text-6xl font-bold mb-6">LUNA<br />HECHICERA</h1>
+                <p class="text-xl mb-8">
+                  Descubre el poder de la magia en nuestro nuevo juego de
+                  aventuras
+                </p>
+                <div class="flex gap-4">
+                  <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90"
+                  >
+                    Ver más
+                  </button>
+                  <button
+                    class="border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white/20"
+                  >
+                    Suscribirse
+                  </button>
                 </div>
+              </div>
             </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/tRLFC7mc/img6.jpg">
-                <div class="content">
-                    <div class="title">
-                        Phoenix
-                    </div>
-                    <div class="description">
-                        FLASH ON CURVE
-                    </div>
+          </div>
+          <div class="carousel-item absolute w-full h-full">
+            <div class="absolute inset-0">
+              <img
+                src="https://public.readdy.ai/ai/img_res/7def9333871a5396d6c28419a86477df.jpg"
+                class="w-full h-full object-cover"
+                alt="Hero"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
+              ></div>
+            </div>
+            <div
+              class="relative z-10 flex items-center h-full container mx-auto px-6"
+            >
+              <div class="w-1/2 text-white">
+                <h1 class="text-6xl font-bold mb-6">BATALLA<br />LEGENDARIA</h1>
+                <p class="text-xl mb-8">
+                  Únete a la batalla más épica jamás contada
+                </p>
+                <div class="flex gap-4">
+                  <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90"
+                  >
+                    Ver más
+                  </button>
+                  <button
+                    class="border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white/20"
+                  >
+                    Suscribirse
+                  </button>
                 </div>
+              </div>
             </div>
-            <div class="item">
-                <img src="https://i.postimg.cc/SRzQvS62/img11.jpg">
-                <div class="content">
-                    <div class="title">
-                        VIPER
-                    </div>
-                    <div class="description">
-                        POISONOUS CLOUD 
-                    </div>
+          </div>
+          <div class="carousel-item absolute w-full h-full">
+            <div class="absolute inset-0">
+              <img
+                src="https://public.readdy.ai/ai/img_res/93b497e66afe1c10eee91d55bed38221.jpg"
+                class="w-full h-full object-cover"
+                alt="Hero"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
+              ></div>
+            </div>
+            <div
+              class="relative z-10 flex items-center h-full container mx-auto px-6"
+            >
+              <div class="w-1/2 text-white">
+                <h1 class="text-6xl font-bold mb-6">CIUDAD<br />MÁGICA</h1>
+                <p class="text-xl mb-8">
+                  Explora un mundo lleno de maravillas y misterios
+                </p>
+                <div class="flex gap-4">
+                  <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90"
+                  >
+                    Ver más
+                  </button>
+                  <button
+                    class="border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white/20"
+                  >
+                    Suscribirse
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>        
-        <!-- next prev -->
-
-        <div class="arrows">
-            <button id="prev"><</button>
-            <button id="next">></button>
+          </div>
         </div>
-        <!-- time running -->
-        <div class="time"></div>
-    </div>
-
-    <script src="app.js"></script>
-</body>
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+          <button
+            class="w-3 h-3 rounded-full bg-white"
+            onclick="showSlide(0)"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white/50"
+            onclick="showSlide(1)"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white/50"
+            onclick="showSlide(2)"
+          ></button>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="flex items-center gap-12">
+          <div class="w-1/2">
+            <h2
+              class="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+            >
+              ENTONCES ¿QUÉ HACEMOS?
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Decepcionamos a nuestros padres, en su mayoría.
+              También creamos programas animados para internet, inspirados en animaciones Flash y anime milenario que solíamos ver en línea. Queríamos transmitir la energía, la pasión y el espíritu de comunidad que otras partes del mundo han mostrado por la animación para adolescentes y jóvenes adultos, pero que siempre han faltado en la industria de la animación occidental convencional. Así que decidimos crear programas que quisiéramos ver, y desde entonces, hemos descubierto que millones de personas también quieren verlos.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Nos encargamos de todo, desde el desarrollo hasta la distribución, para garantizar que todo lo relacionado con nuestra serie se haga como nos gusta.
+            </p>
+          </div>
+          <div class="w-1/2">
+            <img
+              src="https://static.wixstatic.com/media/84ed6a_24d1fa4567684902845e3f93e1e39f05~mv2.png/v1/fill/w_481,h_679,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/they_will_never_know.png"
+              class="w-full !rounded-button shadow-xl"
+              alt="Qué hacemos"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-gradient-to-r from-gray-800 to-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12">Actualidad</h2>
+        <div class="grid grid-cols-3 gap-8">
+          <div
+            class="col-span-2 bg-white !rounded-button overflow-hidden shadow-lg hover:shadow-xl transition-shadow section-card"
+          >
+            <img
+              src="https://m.media-amazon.com/images/S/pv-target-images/ce689202927ce880eec6ca93e6462c69c5568d7aff03ec27d4402de05aa3e619._SX1080_FMjpg_.jpg"
+              class="w-full h-64 object-cover"
+              alt="Noticia principal"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-4">
+                Desarrollo de Nuestra Serie:
+              </h3>
+              <p class="text-gray-600">
+                los Beast Games nuestro nuevo show ya disponible en  Prime Video...
+              </p>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg hover:shadow-xl transition-shadow section-card"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/19063bcb5447ab7feb894b928c13efd6.jpg"
+                class="w-full h-32 object-cover"
+                alt="Noticia secundaria"
+              />
+              <div class="p-4">
+                <h3 class="font-bold">Actualización de marzo de 2025</h3>
+              </div>
+            </div>
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg hover:shadow-xl transition-shadow section-card"
+            >
+              <img
+                src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c2d8dc9-03ce-4e3c-a309-dfd0f8fca719_1920x1200.webp"
+                class="w-full h-32 object-cover"
+                alt="Noticia secundaria"
+              />
+              <div class="p-4">
+                <h3 class="font-bold">ARCANE: Nuestra nueva serie original</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12">Nuestros Juegos</h2>
+        <div class="grid grid-cols-2 gap-8">
+          <div
+            class="game-card relative overflow-hidden !rounded-button cursor-pointer"
+          >
+            <img
+              src="https://www.riotgames.com/darkroom/564/9c0219c494342e38e3c8334ed0c2abf7:8cac5fc07f08a491473305ba8f594181/lol-2024-kv.png"
+              class="w-full h-64 object-cover"
+              alt="League of Legends"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full"
+            >
+              <h3 class="text-white text-2xl font-bold">League of Legends</h3>
+            </div>
+          </div>
+          <div
+            class="game-card relative overflow-hidden !rounded-button cursor-pointer"
+          >
+            <img
+              src="https://www.riotgames.com/darkroom/564/dbe9bf44707cd98e3c6b3662b7533b06:c02fa977a15abac271216319c3411242/val-productcard-a28.png"
+              class="w-full h-64 object-cover"
+              alt="Valorant"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full"
+            >
+              <h3 class="text-white text-2xl font-bold">Valorant</h3>
+            </div>
+          </div>
+          <div
+            class="game-card relative overflow-hidden !rounded-button cursor-pointer"
+          >
+            <img
+              src="https://www.riotgames.com/darkroom/564/f5a8a9bb50473c9ac017f0483111935d:f996cf6c5745e4b3e47680239c21524f/tft-set-13-productcard.png"
+              class="w-full h-64 object-cover"
+              alt="Teamfight Tactics"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full"
+            >
+              <h3 class="text-white text-2xl font-bold">Teamfight Tactics</h3>
+            </div>
+          </div>
+          <div
+            class="game-card relative overflow-hidden !rounded-button cursor-pointer"
+          >
+            <img
+              src="https://www.riotgames.com/darkroom/564/cc40482b270f88d5286842e6546387c1:e3bda9ca0e5ac25ca141936713fe264c/lor-set-9-product-card.png"
+              class="w-full h-64 object-cover"
+              alt="Legends of Runeterra"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full"
+            >
+              <h3 class="text-white text-2xl font-bold">
+                Legends of Runeterra
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden"
+    >
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+        >
+          NUESTROS ESPECTÁCULOS
+        </h2>
+        <div class="flex gap-8 spectacle-carousel">
+          <div class="flex-none w-72">
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg section-card"
+            >
+              <img
+                src="https://static.wixstatic.com/media/84ed6a_7e2283d8851444cba3b1dc206647b061~mv2.png/v1/fill/w_726,h_726,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/MD_bottomBanner_WIP%20(3).png"
+                class="w-full h-96 object-cover"
+                alt="Mundos Orígenes"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl">Murder Drones</h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none w-72">
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg section-card"
+            >
+              <img
+                src="https://static.wixstatic.com/media/84ed6a_899905d368cd4b01bc159df99d5dc583~mv2.png/v1/fill/w_301,h_474,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/PomniPose.png"
+                class="w-full h-96 object-cover"
+                alt="Guardianes"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl">The Amazing Digital Circus</h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none w-72">
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg section-card"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/776d653e04a3177ad864ad87c3dcc70a.jpg"
+                class="w-full h-96 object-cover"
+                alt="Caballeros Cósmicos"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl">Arcane</h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none w-72">
+            <div
+              class="bg-white !rounded-button overflow-hidden shadow-lg section-card"
+            >
+              <img
+                src="https://public.readdy.ai/ai/img_res/b9d8911390e41d6b099f5898a64062f1.jpg"
+                class="w-full h-96 object-cover"
+                alt="Paraíso Mágico"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl">Beast Games</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12">Preguntas Frecuentes</h2>
+        <div class="space-y-4">
+          <div class="border border-gray-700 !rounded-button">
+            <button
+              class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 text-white"
+            >
+              <span class="font-medium">¿Por qué necesitamos ver magia?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="hidden px-6 py-4 border-t">
+              <p class="text-gray-600">
+                La magia nos ayuda a ver el mundo de una manera diferente y más
+                creativa...
+              </p>
+            </div>
+          </div>
+          <div class="border border-gray-700 !rounded-button">
+            <button
+              class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 text-white"
+            >
+              <span class="font-medium"
+                >¿Necesito pagar 6 meses por adelantado?</span
+              >
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="hidden px-6 py-4 border-t">
+              <p class="text-gray-600">
+                No, ofrecemos diferentes planes de pago flexibles...
+              </p>
+            </div>
+          </div>
+          <div class="border border-gray-700 !rounded-button">
+            <button
+              class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 text-white"
+            >
+              <span class="font-medium"
+                >¿Qué pasa si los datos no se guardan?</span
+              >
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="hidden px-6 py-4 border-t">
+              <p class="text-gray-600">
+                Nuestro sistema tiene copias de seguridad automáticas...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-gradient-to-r from-gray-800 to-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+          Nuestras Asociaciones
+        </h2>
+        <div class="flex justify-center items-center gap-12">
+          <img
+            src="https://static.wikia.nocookie.net/leagueoflegends/images/5/53/Riot_Games_logo_icon.png/revision/latest/scale-to-width-down/200?cb=20220302144707"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Riot Games"
+          />
+          <img
+            src="https://images.icon-icons.com/2699/PNG/512/mojang_logo_icon_170945.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Mojang"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1764px-Epic_Games_logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Epic Games"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Supercell-logo.svg/2516px-Supercell-logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Supercell"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Rockstar_Games_Logo.svg/2226px-Rockstar_Games_Logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Rockstar Games"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Steam"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Starlink_Logo.svg/2560px-Starlink_Logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Starlink"
+          />
+          <img
+            src="https://www.nvidia.com/es-es/about-nvidia/legal-info/logo-brand-usage/_jcr_content/root/responsivegrid/nv_container_392921705/nv_container/nv_image.coreimg.100.1070.png/1722330515197/nvidia-logo-vert.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Nvidia"
+          />
+          <img
+            src="https://e7.pngegg.com/pngimages/817/886/png-clipart-microsoft-logo-icon-microsoft-icon-angle-text.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Microsoft"
+          />
+        </div><br>
+        <div class="flex justify-center items-center gap-12">
+          <img
+            src="https://press.asus.com/assets/w_4035,h_3474/4a83deef-f73a-44e9-a9d6-1ae062de6fb9/ROG%20logo_red.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="ROG"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tesla_logo.png/640px-Tesla_logo.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Tesla Motors"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/2560px-PlayStation_logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Play Station"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Adidas"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Glitch_Productions_logo.svg/1200px-Glitch_Productions_logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Glitch Productions"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/2560px-SpaceX_logo_black.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="SpaceX"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1024px-Samsung_Logo.svg.png"
+            class="h-12 opacity-50 hover:opacity-100 transition-opacity"
+            alt="Samsung"
+          />
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-4 gap-8 mb-8">
+          <div>
+            <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"
+              >logo</a
+            >
+            <p class="text-gray-400">Creando mundos mágicos desde 2010</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Servicios</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white">Mundo Mágico</a></li>
+              <li>
+                <a href="#" class="hover:text-white">Shows Profesionales</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white">Eventos Corporativos</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white">Fiestas Temáticas</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Contacto</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>info@magicworld.com</li>
+              <li>+34 955 123 456</li>
+              <li>Madrid, España</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Síguenos</h3>
+            <div class="flex gap-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-facebook-fill ri-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-twitter-fill ri-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="ri-instagram-fill ri-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <p>© 2025 Producciones Mágicas. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="tailwind.js"></script>
+  </body>
 </html>
-            
